@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root{
+   --purple:#8e44ad;
+   --red:#c0392b;
+   --orange:#f39c12;
+   --black:#333;
+   --white:#fff;
+   --light-color:#666;
+   --light-white:#ccc;
+   --light-bg:#f5f5f5;
+   --border:.1rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Rubik', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition:all .2s linear;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+.empty{
+   padding:1.5rem;
+   text-align: center;
+   border:var(--border);
+   background-color: var(--white);
+   color:var(--red);
+   font-size: 2rem;
+}
+
+.message{
+   position: sticky;
+   top:0;
+   margin:0 auto;
+   max-width: 1200px;
+   background-color: var(--white);
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 10000;
+   gap:1.5rem;
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   cursor: pointer;
+   color:var(--red);
+   font-size: 2.5rem;
+}
+
+.message i:hover{
+   transform: rotate(90deg);
+}
+
+.title{
+   text-align: center;
+   margin-bottom: 2rem;
+   text-transform: uppercase;
+   color:var(--black);
+   font-size: 4rem;
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.white-btn{
+   display: inline-block;
+   margin-top: 1rem;
+   padding:1rem 3rem;
+   cursor: pointer;
+   color:var(--white);
+   font-size: 1.8rem;
+   border-radius: .5rem;
+   text-transform: capitalize;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover{
+   background-color: var(--black);
+}
+
+.white-btn,
+.btn{
+   background-color: var(--purple);
+}
+
+.option-btn{
+   background-color: var(--orange);
+}
+
+.delete-btn{
+   background-color: var(--red);
+}
+
+.white-btn:hover{
+   background-color: var(--white);
+   color:var(--black);
+}
+
+.heading{
+   min-height: 30vh;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-content: center;
+   gap:1rem;
+   background: url(../image/pexels-fox-213399.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;
+   text-align: center;
+}
+
+.heading h3{
+   font-size: 5rem;
+   color:whitesmoke;
+   text-transform: uppercase;
+}
+
+.heading p{
+   font-size: 2.5rem;
+   color:var(--light-color);
+}
+
+.heading p a{
+   color:var(--purple);
+}
+
+.heading p a:hover{
+   text-decoration: underline;
+}
+
+
+/*  */
+
+.about .logoA {
+   width: 150px; /* Adjust the width to make the logo smaller */
+   height: auto; /* Maintain the aspect ratio */
+   border-radius: 8px;
+   margin-top: 20px;
+   margin-bottom: 50px;
+}
+
+.container {
+   width: 80%;
+   margin: 0 auto;
+}
+
+.heading {
+   text-align: center;
+   padding: 20px 0;
+}
+
+.heading h3 {
+   font-size: 36px;
+   color: #333;
+   margin: 0;
+}
+
+.about {
+   background-color: #fff;
+   padding: 40px;
+   margin: 20px 0;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-inner {
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.about h2, .about h3 {
+   color: #007BFF;
+}
+
+.about p {
+   font-size: 18px;
+   color: #555;
+   line-height: 1.6;
+}
+
+.about ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+.about ul li {
+   font-size: 18px;
+   color: #555;
+   padding: 5px 0;
+}
+
+h2{
+   font-size: 25px;
+}
+
+.heading h3{
+   color: white;
+}
+
+/* para hide */
+/* Hide the user icon */
+.header .header-2 .flex .icons .fas.fa-user {
+    display: none; /* This hides the user icon */
+ }
+ 
+ /* Hide the user box */
+ .header .header-2 .flex .user-box {
+    display: none; /* This hides the user box */
+ }

@@ -1,0 +1,138 @@
+/* product_details.css */
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #23374b;
+}
+
+.product-details {
+    max-width: 800px;
+    height: 500px;
+    margin-top: 70px;
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-details img {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.product-details .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 230px;
+}
+
+.product-details .btn:hover {
+    background-color: #0056b3;
+}
+
+.product-details .btn:focus {
+    outline: none;
+}
+
+.description{
+    position: absolute;
+    margin-left: 420px;
+    margin-top: -400px;
+    width: 410px;
+} */
+
+
+/* product_details.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #23374b;
+    color: #333; /* Set default text color for better contrast */
+}
+
+.product-details {
+    max-width: 800px;
+    margin: 50px auto; /* Center the container */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-details img {
+    max-width: 100%; /* Ensure image does not exceed its container */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.product-details .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.product-details .btn:hover {
+    background-color: #0056b3;
+}
+
+.product-details .btn:focus {
+    outline: none;
+}
+
+.description {
+    padding-top: 20px; /* Add some space for the description */
+}
+
+.reviews-section {
+    padding-top: 20px;
+}
+
+.review {
+    border-bottom: 1px solid #ddd; /* Add divider between reviews */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.review:last-child {
+    border-bottom: none; /* Remove divider for the last review */
+}

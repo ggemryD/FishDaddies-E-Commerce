@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background: #23374b;
+   color: #fff;
+   line-height: 1.5;
+ }
+
+a {
+   color: #262626;
+   text-decoration: none;
+ }
+
+ul {
+   list-style: none;
+ }
+
+.container {
+   max-width: 1300px;
+   margin: auto;
+ }
+
+/* Dropdown styles */
+.navbar {
+   position: relative;
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #23374bda;
+   min-width: 160px;
+   z-index: 1;
+   font-size: -222px;
+}
+
+.dropdown-content a {
+   padding: 2px 16px;
+   text-decoration: none;
+   display: block;
+}
+
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+
+.dropdown-btn {
+   cursor: pointer;
+   text-decoration: none;
+}
+
+/* Showcase styles */
+.showcase {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   justify-content: flex-end;
+   padding-bottom: 50px;
+   margin-bottom: 20px;
+}
+
+.showcase h2,
+.showcase p {
+   margin-bottom: 10px;
+}
+
+.showcase h2 {
+   font-size: 65px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: aqua;
+}
+
+.showcase .shopnow-btn {
+   margin-top: 20px;
+   margin-bottom: 100px;
+}
+
+/* Contact form styles */
+.contact form {
+   width: 100%;
+   max-width: 600px;
+   margin: auto;
+   padding: 20px;
+   background: rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact form h3 {
+   margin-bottom: 20px;
+   font-size: 24px;
+   color: #fff;
+}
+
+.contact form .box {
+   width: 100%;
+   margin-bottom: 20px;
+   padding: 10px;
+   background: rgba(255, 255, 255, 0.1);
+   border: none;
+   border-radius: 5px;
+   color: #fff;
+   font-size: 16px;
+}
+
+.contact form textarea {
+   resize: vertical;
+   height: 200px;
+}
+
+.contact form .btn {
+   width: 100%;
+   padding: 10px;
+   background: #162938;
+   border: none;
+   border-radius: 5px;
+   color: #fff;
+   font-size: 18px;
+   cursor: pointer;
+}
+
+.contact form .btn:hover {
+   background: #0d1c29;
+}
+
+/*  */
+.message-container {
+    max-height: 400px; /* Set the maximum height for the message container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Adjust the background as needed */
+    border-radius: 10px;
+ }
+ 
+ .message p {
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Ensure long words break appropriately */
+ }
+ 
+ textarea {
+    width: 100%;
+    resize: vertical;
+    height: 100px; /* Set a default height for the textarea */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+ }
+ 
+ .btn {
+    padding: 10px;
+    background: #162938;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+ }
+ 
+ .btn:hover {
+    background: #0d1c29;
+ }
+ 
