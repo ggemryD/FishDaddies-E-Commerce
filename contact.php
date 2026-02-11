@@ -76,4 +76,3 @@ $select_messages = mysqli_query($conn, "SELECT * FROM `message` WHERE user_id = 
 
 </body>
 </html>
-

@@ -42,32 +42,42 @@ if(!isset($user_id)){
 
    <section class="placed-orders">
 
-      <!-- <h1 class="title">placed orders</h1> -->
-
-      <div class="box-container">
-
-         <?php
-            $order_query = mysqli_query($conn, "SELECT * FROM `orders` WHERE user_id = '$user_id'") or die('query failed');
-            if(mysqli_num_rows($order_query) > 0){
-               while($fetch_orders = mysqli_fetch_assoc($order_query)){
-         ?>
-         <div class="box">
-            <p> placed on : <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
-            <p> name : <span><?php echo $fetch_orders['name']; ?></span> </p>
-            <p> number : <span><?php echo $fetch_orders['number']; ?></span> </p>
-            <p> email : <span><?php echo $fetch_orders['email']; ?></span> </p>
-            <p> address : <span><?php echo $fetch_orders['address']; ?></span> </p>
-            <p> payment method : <span><?php echo $fetch_orders['method']; ?></span> </p>
-            <p> your orders : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
-            <p> total price : <span>₱<?php echo $fetch_orders['total_price']; ?> </span> </p>
-            <p> payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
-         </div>
-         <?php
-         }
-         }else{
-            echo '<p class="empty">no orders placed yet!</p>';
-         }
-         ?>
+      <div class="orders-table-container">
+         <table class="orders-table">
+            <thead>
+               <tr>
+                  <th>Placed On</th>
+                  <th>Order Items</th>
+                  <th>Total Price</th>
+                  <th>Shipping Address</th>
+                  <th>Status</th>
+               </tr>
+            </thead>
+            <tbody>
+               <?php
+                  $order_query = mysqli_query($conn, "SELECT * FROM `orders` WHERE user_id = '$user_id' ORDER BY id DESC") or die('query failed');
+                  if(mysqli_num_rows($order_query) > 0){
+                     while($fetch_orders = mysqli_fetch_assoc($order_query)){
+               ?>
+               <tr>
+                  <td data-label="Placed On"><?php echo $fetch_orders['placed_on']; ?></td>
+                  <td data-label="Order Items" class="order-items"><?php echo $fetch_orders['total_products']; ?></td>
+                  <td data-label="Total Price" class="price">₱<?php echo number_format($fetch_orders['total_price'], 2); ?></td>
+                  <td data-label="Shipping Address"><?php echo $fetch_orders['address']; ?></td>
+                  <td data-label="Status">
+                     <span class="status-badge <?php echo $fetch_orders['payment_status']; ?>">
+                        <?php echo $fetch_orders['payment_status']; ?>
+                     </span>
+                  </td>
+               </tr>
+               <?php
+                  }
+               }else{
+                  echo '<tr><td colspan="5" class="empty">no orders placed yet!</td></tr>';
+               }
+               ?>
+            </tbody>
+         </table>
       </div>
 
    </section>

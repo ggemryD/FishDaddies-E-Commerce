@@ -90,9 +90,13 @@ body {
 }
 
 .product-details img {
-    max-width: 100%; /* Ensure image does not exceed its container */
+    width: 100%;
+    height: 400px;
+    object-fit: contain; /* Keeps original ratio without cropping */
+    background-color: #f9f9f9; /* Optional: adds a light background for transparent or small images */
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .product-details p {

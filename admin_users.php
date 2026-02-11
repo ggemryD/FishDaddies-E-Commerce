@@ -42,21 +42,54 @@ if(isset($_GET['delete'])){
 
    <h1 class="title"> user accounts </h1>
 
-   <div class="box-container">
-      <?php
-         $select_users = mysqli_query($conn, "SELECT * FROM `users`") or die('query failed');
-         while($fetch_users = mysqli_fetch_assoc($select_users)){
-      ?>
-      <div class="box">
-         <p> user id : <span><?php echo $fetch_users['id']; ?></span> </p>
-         <p> username : <span><?php echo $fetch_users['name']; ?></span> </p>
-         <p> email : <span><?php echo $fetch_users['email']; ?></span> </p>
-         <!-- <p> user type : <span style="color:<?php if($fetch_users['user_type'] == 'admin'){ echo 'var(--orange)'; } ?>"><?php echo $fetch_users['user_type']; ?></span> </p> -->
-         <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('delete this user?');" class="delete-btn">delete user</a>
-      </div>
-      <?php
-         };
-      ?>
+   <div class="users-table-container">
+      <table class="users-table">
+         <thead>
+            <tr>
+               <th>User ID</th>
+               <th>Username</th>
+               <th>Email Address</th>
+               <th>User Type</th>
+               <th>Actions</th>
+            </tr>
+         </thead>
+         <tbody>
+            <?php
+               $select_users = mysqli_query($conn, "SELECT * FROM `users` ORDER BY user_type ASC, id DESC") or die('query failed');
+               if(mysqli_num_rows($select_users) > 0){
+                  while($fetch_users = mysqli_fetch_assoc($select_users)){
+                     $type_class = ($fetch_users['user_type'] == 'admin') ? 'admin' : 'user';
+            ?>
+            <tr>
+               <td data-label="User ID"><?php echo $fetch_users['id']; ?></td>
+               <td data-label="Username">
+                  <div class="user-info">
+                     <i class="fas fa-user-circle"></i>
+                     <span><?php echo $fetch_users['name']; ?></span>
+                  </div>
+               </td>
+               <td data-label="Email Address"><?php echo $fetch_users['email']; ?></td>
+               <td data-label="User Type">
+                  <span class="user-badge <?php echo $type_class; ?>">
+                     <?php echo $fetch_users['user_type']; ?>
+                  </span>
+               </td>
+               <td data-label="Actions">
+                  <?php if($fetch_users['id'] != $admin_id){ ?>
+                     <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('delete this user?');" class="delete-icon" title="Delete User">
+                        <i class="fas fa-trash"></i>
+                     </a>
+                  <?php }else{ echo '<span class="current-user">Current</span>'; } ?>
+               </td>
+            </tr>
+            <?php
+                  }
+               }else{
+                  echo '<tr><td colspan="5" class="empty">no users found!</td></tr>';
+               }
+            ?>
+         </tbody>
+      </table>
    </div>
 
 </section>
