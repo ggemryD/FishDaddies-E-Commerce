@@ -200,7 +200,7 @@ section{
 }
 
 .orders-table thead tr {
-   background-color: var(--purple);
+   background-color: var(--light-color);
 }
 
 .orders-table th {
@@ -256,7 +256,7 @@ section{
 
 .orders-table .price {
    font-weight: bold;
-   color: var(--purple);
+   color: var(--black);
    font-size: 1.8rem;
 }
 
