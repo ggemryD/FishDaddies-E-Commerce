@@ -266,7 +266,6 @@
                   
                   <!-- Update and Cancel buttons -->
                   <input type="submit" value="Update" name="update_product" class="btn">
-                  <a href="admin_products.php" class="option-btn">Cancel</a>
                </form>
 
                <?php
