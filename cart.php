@@ -98,7 +98,7 @@ if(isset($_GET['delete_all'])){
          <p>grand total : <span>₱<?php echo $grand_total; ?></span></p>
          <div class="flex">
             <a href="shop.php" class="cts-btn">continue shopping</a>
-            <a href="checkout.php" class="btn proceed-checkout <?php echo ($grand_total > 1)?'':'disabled'; ?>">proceed to checkout</a>
+            <a href="checkout.php" class="btn proceed-checkout <?php echo ($grand_total > 1)?'':'disabled'; ?>">checkout</a>
          </div>
       </div>
 

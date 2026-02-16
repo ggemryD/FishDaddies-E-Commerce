@@ -206,7 +206,7 @@ section{
 
 .shopping-cart .cart-total{
    width: 100%;
-   max-width: 40rem;
+   max-width: 50rem;
    margin:0 auto;
    border:var(--border);
    padding:2rem;
