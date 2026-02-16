@@ -77,7 +77,8 @@ section{
     font-size: 1.8rem;
     border-radius: .5rem;
     text-transform: capitalize;
-    width: 400px;
+    width: 100%;
+    max-width: 24rem;
 }
 
 .btn:hover,
@@ -129,7 +130,7 @@ section{
    max-width: 1200px;
    margin:0 auto;
    display: grid;
-   grid-template-columns: repeat(auto-fit, 30rem);
+   grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
    align-items: center;
    gap:1.5rem;
    justify-content: center;
@@ -137,12 +138,14 @@ section{
 
 .shopping-cart .box-container .box{
    text-align: center;
-   padding:2rem;
+   padding:1.5rem;
    border-radius: .5rem;
    background-color: var(--white);
    box-shadow: var(--box-shadow);
    position: relative;
    border:var(--border);
+   max-width: 32rem;
+   margin:0 auto;
 }
 
 .shopping-cart .box-container .box .fa-times{
@@ -162,21 +165,22 @@ section{
 }
 
 .shopping-cart .box-container .box img{
-   height: 30rem;
-   max-width: 100%;  /* Prevents the image from exceeding the container's width */
-   object-fit: cover;  /* Ensures the image covers the area without distortion */
-   border-radius: .5rem;  /* Gives a slight roundness to the image corners */
+   height: 18rem;
+   max-width: 100%;
+   object-fit: cover;
+   border-radius: .5rem;
+   margin-bottom: 1rem;
 }
 
 .shopping-cart .box-container .box .name{
-   padding:1rem 0;
-   font-size: 2rem;
+   padding:.5rem 0;
+   font-size: 1.8rem;
    color:var(--black);
 }
 
 .shopping-cart .box-container .box .price{
    padding:1rem 0;
-   font-size: 2.5rem;
+   font-size: 2.1rem;
    color:var(--red);
 }
 
@@ -192,7 +196,7 @@ section{
 
 .shopping-cart .box-container .box .sub-total{
    padding-top: 1.5rem;
-   font-size: 2rem;
+   font-size: 1.8rem;
    color:var(--light-color);
 }
 
@@ -201,15 +205,16 @@ section{
 }
 
 .shopping-cart .cart-total{
-   /* max-width: 1200px; */
-   width: 400px;
+   width: 100%;
+   max-width: 40rem;
    margin:0 auto;
-   /* border:var(--border); */
-   border:.1rem solid white;
+   border:var(--border);
    padding:2rem;
    text-align: center;
    margin-top: 2rem;
    border-radius: .5rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
 }
 
 .shopping-cart .cart-total p{
@@ -245,4 +250,3 @@ section{
 .header .header-2 .flex .user-box {
    display: none; /* This hides the user box */
 }
-
