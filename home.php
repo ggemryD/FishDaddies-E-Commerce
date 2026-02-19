@@ -124,7 +124,7 @@ if(isset($_POST['add_to_cart'])){
           </form>
       </div>
 
-      <div class="form-box register">
+      <div class="form-box register">               
           <h2>Registration</h2>
           <form action="#">
               <div class="input-box">
